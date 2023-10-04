@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block body %}
+
+<form action="#" method="post">
+    <input type="text" name="text" id="text">
+    <input type="submit" value="Analyses">
+</form>
+
+{% if tokens %}
+
+{% for token in tokens %}
+<h4>{{token.text}}     {{token.pos_}}    {{token.dep_}}</h4>
+{% endfor %}
+{% else %}
+<h4>Enter text to display result ... </h4>
+{% endif %}
+
+
+{% endblock %}
